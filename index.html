@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overLay">
+      <form class="popupCard">
+        <h2>Add New Book</h2>
+        <input type="text" id="bookTitle" placeholder="Title" required />
+        <input type="text" id="bookAuthor" placeholder="Author" required />
+        <input type="number" id="bookPages" placeholder="Pages" required />
+
+        <div>
+          <span>Have you read it?</span><input type="checkbox" id="isRead" />
+        </div>
+        <button id="submit">Submit</button>
+      </form>
+    </div>
+    <div class="container">
+      <div class="header">
+        <p>Libary</p>
+        <button>Logn in</button>
+      </div>
+      <div class="content">
+        <button id="addBook">+ Add book</button>
+        <div class="cards">
+          <div class="card">
+            <p>vwrwef</p>
+            <p>vw</p>
+            <p>15</p>
+            <button id="changeRead">Read</button>
+            <button id="remove">Remove</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer">Copyright © 2024 fwejoi</div>
+    </div>
+  </body>
+</html>
