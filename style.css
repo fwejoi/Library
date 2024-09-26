@@ -15,13 +15,13 @@
   justify-content: center;
   align-items: center;
   z-index: 3;
-  opacity: 0; /* 初始透明度 */
-  transition: opacity 1s ease; /* 添加过渡效果 */
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 .overLay.active {
-  display: flex; /* 当添加 active 类时 */
-  opacity: 1; /* 使其可见 */
+  display: flex;
+  opacity: 1;
 }
 
 .popupCard {
@@ -29,19 +29,20 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 300px;
+  width: 90%; /* 使用百分比适应屏幕 */
+  max-width: 400px; /* 设置最大宽度 */
   background-color: white;
   padding: 10px;
   height: 450px;
-  transform: scale(0); /* 初始缩放为0 */
-  transition: transform 1 ease; /* 添加过渡效果 */
+  transform: scale(0);
+  transition: transform 1s ease;
   border: 4px solid black;
   border-radius: 3px;
   background-color: antiquewhite;
 }
 
 .popupCard input {
-  width: 200px;
+  width: 80%; /* 使用百分比适应屏幕 */
   height: 35px;
   border: 2px solid rgb(40, 39, 39);
   border-radius: 5px;
@@ -61,46 +62,46 @@
   width: 20px;
   height: 20px;
   border-radius: 5px;
-  outline: none; /* 去除焦点样式 */
-  cursor: pointer; /* 鼠标悬停时显示手形光标 */
-  position: relative; /* 为伪元素提供定位 */
+  outline: none;
+  cursor: pointer;
+  position: relative;
 }
 
 input[id="isRead"]:checked::after {
-  content: "✔️"; /* 显示勾号 */
+  content: "✔️";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* 中心对齐 */
-  font-size: 14px; /* 勾号大小 */
-  color: rgb(251, 142, 142); /* 勾号颜色 */
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: rgb(251, 142, 142);
 }
 
 .popupCard #submit {
   background-color: #4a7c8c;
-  width: 200px;
+  width: 80%; /* 使用百分比适应屏幕 */
   height: 40px;
   border-radius: 5px;
   font-size: 20px;
   font-weight: bold;
-  color: white; /* 按钮文本颜色 */
-  border: none; /* 去除边框 */
-  cursor: pointer; /* 鼠标悬停时显示手形光标 */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* 添加过渡效果 */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .popupCard #submit:hover {
-  background-color: #3a6a7c; /* 悬停时的背景颜色 */
-  transform: scale(1.05); /* 悬停时放大效果 */
+  background-color: #3a6a7c;
+  transform: scale(1.05);
 }
 
 .popupCard #submit:active {
-  background-color: #2a4a4f; /* 点击时的背景颜色 */
-  transform: scale(0.95); /* 点击时缩小效果 */
+  background-color: #2a4a4f;
+  transform: scale(0.95);
 }
 
 .overLay.active .popupCard {
-  transform: scale(1); /* 恢复正常大小 */
+  transform: scale(1);
 }
 
 .container {
@@ -116,7 +117,7 @@ input[id="isRead"]:checked::after {
   height: 20vh;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   display: flex;
-  padding: 10px 150px;
+  padding: 10px 5%; /* 使用百分比 */
   justify-content: space-between;
   align-items: center;
 }
@@ -127,24 +128,24 @@ input[id="isRead"]:checked::after {
 }
 
 .header button {
-  background-color: #4a7c8c; /* 按钮背景颜色 */
-  color: white; /* 字体颜色 */
-  padding: 15px 30px; /* 内边距 */
-  border: none; /* 无边框 */
-  border-radius: 25px; /* 圆角 */
-  font-size: 16px; /* 字体大小 */
-  cursor: pointer; /* 鼠标悬停时显示手形光标 */
-  transition: background-color 0.3s, transform 0.2s; /* 过渡效果 */
+  background-color: #4a7c8c;
+  color: white;
+  padding: 10px 20px; /* 调整内边距 */
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .header button:hover {
-  background-color: #3a6a7c; /* 悬停时的背景颜色 */
-  transform: scale(1.05); /* 悬停时放大效果 */
+  background-color: #3a6a7c;
+  transform: scale(1.05);
 }
 
 .header button:active {
-  background-color: #2a4a4f; /* 点击时的背景颜色 */
-  transform: scale(0.95); /* 点击时缩小效果 */
+  background-color: #2a4a4f;
+  transform: scale(0.95);
 }
 
 .content {
@@ -152,21 +153,18 @@ input[id="isRead"]:checked::after {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding: 10px 150px;
+  padding: 10px 5%; /* 使用百分比 */
   justify-content: start;
   align-items: center;
 }
 
 .content button {
   background-color: white;
-  width: 200px;
+  width: 15%; /* 使用百分比适应屏幕 */
   margin-top: 10px;
-  position: relative;
-  top: 0;
-  text-align: center;
   height: 80px;
   font-size: 30px;
-  transition: background-color 0.5s, transform 0.5s; /* 调整渐变时间 */
+  transition: background-color 0.5s, transform 0.5s;
 }
 
 .content button:hover {
@@ -182,34 +180,40 @@ input[id="isRead"]:checked::after {
 .cards {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* 自动填充卡片 */
+  /* 每一列的宽度至少为 200 像素，并且会自动填充空间，列数会根据容器的宽度而变化 */
   gap: 10px;
   padding: 10px;
 }
 
-.card{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 320px;
-    height: 300px;
-    background-color: antiquewhite;
-    border: 2px solid rgb(70, 70, 70);
-    padding: 20px 30px;
+.card {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%; /* 使用百分比适应屏幕 */
+  max-width: 320px; /* 设置最大宽度 */
+  height: 300px;
+  background-color: antiquewhite;
+  border: 2px solid rgb(70, 70, 70);
+  padding: 20px 30px;
 }
 
-.card p{
-    font-size: 20px;
-    font-weight: bold;
+.card p {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.card button{
-    width: 150px;
-    height: 50px;
-    border-radius: 2px;
-    font-size: 20px;
-    font-weight: bold;
+.card button {
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .footer {
@@ -221,4 +225,41 @@ input[id="isRead"]:checked::after {
   bottom: 0;
   text-align: center;
   height: 5vh;
+}
+
+/* 媒体查询 */
+@media (max-width: 768px) {
+  .header p {
+    font-size: 30px; /* 调整头部文字大小 */
+  }
+
+  .header button {
+    padding: 10px 15px; /* 调整按钮内边距 */
+  }
+
+  .popupCard {
+    width: 95%; /* 更小的宽度 */
+  }
+
+  .card {
+    height: auto; /* 自适应高度 */
+  }
+}
+
+@media (max-width: 480px) {
+  .header p {
+    font-size: 24px; /* 更小的文字大小 */
+  }
+
+  .header button {
+    font-size: 14px; /* 调整按钮文字大小 */
+  }
+
+  .popupCard input {
+    width: 90%; /* 更小的输入框宽度 */
+  }
+
+  .content button {
+    font-size: 24px; /* 调整按钮文字大小 */
+  }
 }
