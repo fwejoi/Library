@@ -158,23 +158,13 @@ input[id="isRead"]:checked::after {
   align-items: center;
 }
 
-.content button {
+#addBook {
   background-color: white;
   width: 15%; /* 使用百分比适应屏幕 */
   margin-top: 10px;
   height: 80px;
   font-size: 30px;
   transition: background-color 0.5s, transform 0.5s;
-}
-
-.content button:hover {
-  background-color: #ccdde2;
-  transform: scale(1.05);
-}
-
-.content button:active {
-  background-color: #2a4a4f;
-  transform: scale(0.95);
 }
 
 .cards {
@@ -199,7 +189,7 @@ input[id="isRead"]:checked::after {
   max-width: 320px; /* 设置最大宽度 */
   height: 300px;
   background-color: antiquewhite;
-  border: 2px solid rgb(70, 70, 70);
+  border: 3px solid rgb(70, 70, 70);
   padding: 20px 30px;
 }
 
@@ -208,12 +198,44 @@ input[id="isRead"]:checked::after {
   font-weight: bold;
 }
 
-.card button {
+/* .card button {
   width: 150px;
   height: 50px;
   border-radius: 2px;
   font-size: 20px;
   font-weight: bold;
+} */
+
+.changeRead {
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2.5px solid black;
+  background-color: rgb(60, 151, 255);
+}
+
+.changeRead-notRead {
+  background-color: rgb(255, 105, 105);
+}
+
+.changeRead-notRead {
+  background-color: rgb(255, 105, 105);
+}
+
+.remove {
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2.5px solid black;
+  background-color: rgb(205, 205, 205);
+}
+
+.card button:hover {
+  opacity: 0.8;
 }
 
 .footer {

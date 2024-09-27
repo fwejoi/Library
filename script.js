@@ -46,12 +46,17 @@ function createCard(book) {
     `;
 
   const removeButton = card.querySelector(".remove");
+  const changeRead = card.querySelector(".changeRead");
   removeButton.addEventListener("click", function () {
     //删除与被删除卡片相对应的书籍
     myLibrary = myLibrary.filter((b) => b.title !== card.dataset.title); //删除与被删除卡片相对应的书籍
     console.log(myLibrary); // 检查当前的 myLibrary
     card.remove(); // 移除卡片
     console.log("你已经点击了移除");
+  });
+  changeRead.addEventListener("click", () => {
+    changeRead.classList.toggle("changeRead-notRead");
+    console.log(changeRead.classList);
   });
 
   cards.appendChild(card);
@@ -63,12 +68,20 @@ addBookButton.addEventListener("click", function () {
 });
 
 // 提交创建当前书籍
-submitButton.addEventListener("click", () => {
+submitButton.addEventListener("click", (e) => {
   const title = document.querySelector("#bookTitle").value;
   const author = document.querySelector("#bookAuthor").value;
   const pages = document.querySelector("#bookPages").value;
   const isRead = document.querySelector("#isRead").checked;
 
+  if (isNaN(pages) || pages <= 0) {
+    pagesInput.style.borderColor = "red"; // 改变边框颜色为红色
+    e.preventDefault(); // 阻止提交
+
+    pagesInput.disabled = true; // 禁用输入框
+  } else {
+    // 处理有效输入
+  }
   // 创建书籍对象
   const newBook = new Book(title, author, pages, isRead);
   addBookToLibrary(newBook); // 添加书籍到库
@@ -78,3 +91,4 @@ submitButton.addEventListener("click", () => {
   // 清空输入框
   emptyInputs();
 });
+
